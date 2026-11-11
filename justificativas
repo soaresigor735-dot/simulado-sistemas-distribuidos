@@ -1,0 +1,15 @@
+Qual o papel do semáforo?
+
+O semáforo (threading.Semaphore) atua controlando o acesso concorrente aos recursos, limitando estritamente a quantidade máxima de threads (neste caso, no máximo 2) que podem executar a seção crítica de processamento de pedidos de forma simultânea.
+
+Por que a réplica precisava ser sincronizada?
+
+A réplica precisa ser sincronizada para refletir o estado mais recente do servidor principal (atualizando o estoque para 7 unidades), garantindo consistência de dados entre os nós do sistema distribuído.
+
+O que é failover?
+
+Failover é um mecanismo de tolerância a falhas que comuta automaticamente as operações para um sistema de backup ou réplica (neste caso, respondendo consultas pela réplica) quando o servidor principal deixa de responder ou cai.
+
+Por que o uso do Lock ajuda a evitar problemas de concorrência?
+
+O Lock (trinco de exclusão mútua) garante que apenas uma thread por vez consiga ler e modificar a variável crítica de estoque, prevenindo condições de corrida (race conditions) que poderiam corromper a contagem correta das unidades.
