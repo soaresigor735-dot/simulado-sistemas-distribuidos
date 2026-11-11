@@ -1,0 +1,8 @@
+=== CENTRAL DE PEDIDOS ===
+Limite simultaneo: 2
+Estoque inicial: 10
+Pedidos: [101, 102, 103]
+Estoque principal: 7
+Replica antes: 10
+Replica depois: 7
+Consulta apos falha: REPLICA 7
